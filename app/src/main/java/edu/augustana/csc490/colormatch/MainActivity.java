@@ -5,7 +5,7 @@ package edu.augustana.csc490.colormatch;
 // Type: Game
 // Description: A game to test your memory.  Match the colors
 //  displayed in the correct order! But do it fast, you're being
-//  timed!
+//  timed! Play any of four difficulty levels.
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
