@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">ColorMatch</string>
 
-    <string name="hello_world">Hello world!</string>
+    <string name="app_title">Color Match!</string>
+    <string name="play_game_text">Play Game</string>
+    <string name="high_scores_text">View High Scores</string>
+    <string name="author_text">By AkslandApplications</string>
     <string name="action_settings">Settings</string>
 </resources>
