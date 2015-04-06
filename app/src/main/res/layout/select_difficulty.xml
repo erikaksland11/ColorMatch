@@ -45,31 +45,54 @@
         android:paddingBottom="@dimen/activity_vertical_margin">
 
         <RadioButton
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="New RadioButton"
+            android:text="@string/easyDiffText"
             android:id="@+id/easyDifficulty"
-            android:checked="false" />
+            android:checked="false"
+            android:textSize="18dp"
+            android:background="#ff0096ff" />
 
         <RadioButton
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="New RadioButton"
+            android:text="@string/mediumDiffText"
             android:id="@+id/mediumDifficulty"
-            android:checked="false" />
+            android:checked="false"
+            android:textSize="18dp"
+            android:background="#ffffe600" />
 
         <RadioButton
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="New RadioButton"
+            android:text="@string/hardDiffText"
             android:id="@+id/hardDifficulty"
-            android:checked="false" />
+            android:checked="false"
+            android:textSize="18dp"
+            android:background="#ffff3200" />
 
         <RadioButton
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="New RadioButton"
+            android:text="@string/expertDiffText"
             android:id="@+id/expertDifficulty"
-            android:checked="false" />
+            android:checked="false"
+            android:textSize="18dp"
+            android:background="#ffffffff"
+            android:textColor="#ff000000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_gravity="bottom">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/startGameText"
+            android:id="@+id/startGameButton"
+            android:layout_gravity="bottom" />
     </LinearLayout>
 </GridLayout>
