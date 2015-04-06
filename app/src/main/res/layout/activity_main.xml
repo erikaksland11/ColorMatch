@@ -34,7 +34,8 @@
             android:layout_height="50dp"
             android:text="@string/play_game_text"
             android:id="@+id/PlayGameButton"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:textSize="18dp" />
 
         <Button
             android:layout_width="fill_parent"
