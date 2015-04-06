@@ -5,5 +5,10 @@
     <string name="play_game_text">Play Game</string>
     <string name="high_scores_text">View High Scores</string>
     <string name="author_text">By AkslandApplications</string>
+
+    <string name="selectDifficulty">Select Difficulty</string>
+    <string name="playGameText">Play Game</string>
+    <string name="homeDescription">Touch this button to return to the home menu</string>
+
     <string name="action_settings">Settings</string>
 </resources>
