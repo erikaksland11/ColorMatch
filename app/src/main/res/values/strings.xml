@@ -14,7 +14,12 @@
     <string name="hardDiffText">Hard: Classic's Big Brother</string>
     <string name="expertDiffText">Expert: Like... Crazy Hard</string>
     <string name="startGameText">Start Game</string>
-    // mainly activity_main strings
+    // mainly difficulty_layout strings
+    <string name="giveUpText">Give Up</string>
+    <string name="timerText">Time:</string>
+    <string name="timerValueText">3</string>
+    <string name="scoreText">Score:</string>
+    <string name="scoreValueText">0</string>
 
     // mainly high_scores_menu strings
     <string name="highScoresText">Your High Scores</string>
@@ -27,4 +32,6 @@
     <string name="expertText">Expert:</string>
     <string name="expertHighScore">0</string>
     <string name="resetHighScoresText">Reset Your High Scores</string>
+
+
 </resources>
