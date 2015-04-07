@@ -1,5 +1,191 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:columnCount="1"
+    android:rowCount="3"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin">
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/highScoresText"
+            android:id="@+id/highScoresTextView"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:textSize="32dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton"
+            android:contentDescription="@string/homeDescription"
+            android:src="@android:drawable/ic_menu_revert"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+    <GridLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill"
+        android:background="@android:color/darker_gray"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:columnCount="2"
+        android:rowCount="4">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/easyText"
+            android:id="@+id/easyTextView"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:layout_gravity="fill_horizontal|center_vertical"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#ff0096ff"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/easyHighScore"
+            android:id="@+id/easyHighScoreTextView"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_gravity="fill_horizontal|center_vertical"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:background="#ff0096ff"
+            android:gravity="center_vertical|right"
+            android:paddingRight="@dimen/activity_horizontal_margin" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/mediumText"
+            android:id="@+id/mediumTextView"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:layout_gravity="fill_horizontal|center_vertical"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#ffffe600"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/mediumHighScore"
+            android:id="@+id/mediumHighScoreTextView"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_gravity="fill_horizontal|center_vertical"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:background="#ffffe600"
+            android:gravity="center_vertical|right"
+            android:paddingRight="@dimen/activity_horizontal_margin" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/hardText"
+            android:id="@+id/hardTextView"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:layout_gravity="fill_horizontal|center_vertical"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#ffff3200"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/hardHighScore"
+            android:id="@+id/hardHighScoreTextView"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:layout_gravity="fill_horizontal|center_vertical"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:background="#ffff3200"
+            android:gravity="center_vertical|right"
+            android:paddingRight="@dimen/activity_horizontal_margin" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/expertText"
+            android:id="@+id/expertTextView"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:background="#ffffffff"
+            android:layout_gravity="fill_horizontal|center_vertical"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/expertHighScore"
+            android:id="@+id/expertHighScoreTextView"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:layout_gravity="fill_horizontal|center_vertical"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:background="#ffffffff"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:gravity="center_vertical|right"
+            android:paddingRight="@dimen/activity_horizontal_margin" />
+    </GridLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/resetHighScoresText"
+            android:id="@+id/resetHighScoresButton"
+            android:layout_gravity="bottom" />
+    </LinearLayout>
 </GridLayout>
