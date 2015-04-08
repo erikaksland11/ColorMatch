@@ -31,7 +31,8 @@
             android:id="@+id/imageButton"
             android:contentDescription="@string/homeDescription"
             android:src="@android:drawable/ic_menu_revert"
-            android:layout_gravity="center" />
+            android:layout_gravity="center"
+            android:onClick="showMainActivity" />
     </LinearLayout>
 
     <GridLayout

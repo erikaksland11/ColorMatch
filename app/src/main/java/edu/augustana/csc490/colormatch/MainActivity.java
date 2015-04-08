@@ -22,13 +22,13 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
     }
 
-    // Called when the user clicks the playGameButton button
+    // Called when the user clicks the playGameButton
     public void showSelectDifficultyMenu(View view) {
         Intent intent = new Intent(this, SelectDifficultyMenu.class);
         startActivity(intent);
     }
 
-    // Called when the user clicks the highScoresButton button
+    // Called when the user clicks the highScoresButton
     public void showHighScoreMenu(View view) {
         Intent intent = new Intent(this, HighScoreMenu.class);
         startActivity(intent);
