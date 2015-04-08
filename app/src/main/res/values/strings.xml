@@ -1,11 +1,13 @@
 <resources>
     <string name="app_name">Color Match</string>
     <string name="action_settings">Settings</string>
+
     // mainly activity_main strings
-    <string name="app_title">Color Match</string>
-    <string name="play_game_text">Play Game</string>
-    <string name="high_scores_text">View High Scores</string>
+    <string name="appTitle">Color Match</string>
+    <string name="playGameText">Play Game</string>
+    <string name="highScoresText">View High Scores</string>
     <string name="author_text">By AkslandApplications</string>
+
     // mainly select_difficulty strings
     <string name="selectDifficulty">Select Difficulty</string>
     <string name="homeDescription">Touch this button to return to the home menu</string>
@@ -13,16 +15,17 @@
     <string name="mediumDiffText">Medium: The Change Up</string>
     <string name="hardDiffText">Hard: Classic's Big Brother</string>
     <string name="expertDiffText">Expert: Like... Crazy Hard</string>
-    <string name="startGameText">Start Game</string>
+
     // mainly difficulty_layout strings
     <string name="giveUpText">Give Up</string>
+    <string name="startGameText">Start Game</string>
     <string name="timerText">Time:</string>
     <string name="timerValueText">3</string>
     <string name="scoreText">Score:</string>
     <string name="scoreValueText">0</string>
 
     // mainly high_scores_menu strings
-    <string name="highScoresText">Your High Scores</string>
+    <string name="yourHighScoresText">Your High Scores</string>
     <string name="easyText">Easy:</string>
     <string name="easyHighScore">0</string>
     <string name="mediumText">Medium:</string>

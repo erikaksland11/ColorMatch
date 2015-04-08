@@ -8,7 +8,7 @@
     android:columnCount="1"
     android:rowCount="3">
 
-    <TextView android:text="@string/app_title" android:layout_width="wrap_content"
+    <TextView android:text="@string/appTitle" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:textSize="40dp"
@@ -32,7 +32,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="50dp"
-            android:text="@string/play_game_text"
+            android:text="@string/playGameText"
             android:id="@+id/PlayGameButton"
             android:layout_gravity="center_horizontal"
             android:textSize="18dp" />
@@ -40,7 +40,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="50dp"
-            android:text="@string/high_scores_text"
+            android:text="@string/highScoresText"
             android:id="@+id/HighScoresButton" />
 
         <TextView
