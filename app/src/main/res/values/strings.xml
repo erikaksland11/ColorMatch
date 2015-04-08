@@ -13,7 +13,7 @@
     <string name="homeDescription">Touch this button to return to the home menu</string>
     <string name="easyDiffText">Easy: A Classic</string>
     <string name="mediumDiffText">Medium: The Change Up</string>
-    <string name="hardDiffText">Hard: Classic's Big Brother</string>
+    <string name="hardDiffText">Hard: Classic\'s Big Brother</string>
     <string name="expertDiffText">Expert: Like... Crazy Hard</string>
 
     // mainly difficulty_layout strings
@@ -35,6 +35,10 @@
     <string name="expertText">Expert:</string>
     <string name="expertHighScore">0</string>
     <string name="resetHighScoresText">Reset Your High Scores</string>
+    <string name="title_activity_high_score_menu">HighScoreMenu</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_select_difficulty_menu">select_difficulty_menu</string>
 
 
 </resources>
