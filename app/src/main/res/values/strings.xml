@@ -19,7 +19,7 @@
     // mainly difficulty_layout strings
     <string name="giveUpText">Give Up</string>
     <string name="startGameText">Start Game</string>
-    <string name="timerText">Time:</string>
+    <string name="timerText">Timer:</string>
     <string name="timerValueText">3</string>
     <string name="scoreText">Score:</string>
     <string name="scoreValueText">0</string>
@@ -39,6 +39,7 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_select_difficulty_menu">select_difficulty_menu</string>
+    <string name="title_activity_three_button_game_layout">ThreeButtonGameLayout</string>
 
 
 </resources>

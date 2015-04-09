@@ -24,6 +24,10 @@
             android:name=".SelectDifficultyMenu"
             android:label="@string/title_activity_select_difficulty_menu" >
         </activity>
+        <activity
+            android:name=".ThreeButtonGameLayout"
+            android:label="@string/title_activity_three_button_game_layout" >
+        </activity>
     </application>
 
 </manifest>
