@@ -1,12 +1,16 @@
 <resources>
     <string name="app_name">Color Match</string>
+    <string name="title_activity_high_score_menu">Color Match</string>
+    <string name="title_activity_select_difficulty_menu">Color Match</string>
+    <string name="title_activity_three_button_game_layout">Color Match</string>
+    <string name="title_activity_six_button_game_layout">Color Match</string>
     <string name="action_settings">Settings</string>
 
     // mainly activity_main strings
     <string name="appTitle">Color Match</string>
     <string name="playGameText">Play Game</string>
     <string name="highScoresText">View High Scores</string>
-    <string name="author_text">By AkslandApplications</string>
+    <string name="authorText">By AkslandApplications</string>
 
     // mainly select_difficulty strings
     <string name="selectDifficulty">Select Difficulty</string>
@@ -14,7 +18,7 @@
     <string name="easyDiffText">Easy: A Classic</string>
     <string name="mediumDiffText">Medium: The Change Up</string>
     <string name="hardDiffText">Hard: Classic\'s Big Brother</string>
-    <string name="expertDiffText">Expert: Like... Crazy Hard</string>
+    <string name="expertDiffText">Expert: Like… Crazy Hard</string>
 
     // mainly difficulty_layout strings
     <string name="giveUpText">Give Up</string>
@@ -35,11 +39,9 @@
     <string name="expertText">Expert:</string>
     <string name="expertHighScore">0</string>
     <string name="resetHighScoresText">Reset Your High Scores</string>
-    <string name="title_activity_high_score_menu">HighScoreMenu</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="title_activity_select_difficulty_menu">select_difficulty_menu</string>
-    <string name="title_activity_three_button_game_layout">ThreeButtonGameLayout</string>
+
+
 
 
 </resources>

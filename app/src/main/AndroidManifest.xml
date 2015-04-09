@@ -28,6 +28,10 @@
             android:name=".ThreeButtonGameLayout"
             android:label="@string/title_activity_three_button_game_layout" >
         </activity>
+        <activity
+            android:name=".SixButtonGameLayout"
+            android:label="@string/title_activity_six_button_game_layout" >
+        </activity>
     </application>
 
 </manifest>

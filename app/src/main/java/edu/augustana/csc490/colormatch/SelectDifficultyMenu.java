@@ -8,6 +8,7 @@ import android.widget.RadioButton;
 
 
 public class SelectDifficultyMenu extends ActionBarActivity {
+    private int difficultyNumber;       //varies depending on game difficulty
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,27 +29,37 @@ public class SelectDifficultyMenu extends ActionBarActivity {
         switch(view.getId()) {
             case R.id.easyDifficulty:
                 if (checked)
-                    // Pirates are the best
+                    difficultyNumber = 0;
                     break;
             case R.id.mediumDifficulty:
                 if (checked)
-                    // Ninjas rule
+                    difficultyNumber = 1;
                     break;
             case R.id.hardDifficulty:
                 if (checked)
-                    // Pirates are the best
+                    difficultyNumber = 2;
                     break;
             case R.id.expertDifficulty:
                 if (checked)
-                    // Ninjas rule
+                    difficultyNumber = 3;
                     break;
         }
     }
 
-
     // Called when the user clicks the startGameButton
-    public void showGameLayout(View view) {
-        Intent intent = new Intent(this, ThreeButtonGameLayout.class);
-        startActivity(intent);
+    public void showGameLayout(View view){
+        if (difficultyNumber == 0) {
+            Intent intent = new Intent(this, ThreeButtonGameLayout.class);
+            startActivity(intent);
+        } else if (difficultyNumber == 1) {
+            Intent intent = new Intent(this, ThreeButtonGameLayout.class);
+            startActivity(intent);
+        } else if (difficultyNumber == 2) {
+            Intent intent = new Intent(this, SixButtonGameLayout.class);
+            startActivity(intent);
+        } else {
+            Intent intent = new Intent(this, SixButtonGameLayout.class);
+            startActivity(intent);
+        }
     }
 }
