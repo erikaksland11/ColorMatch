@@ -22,6 +22,11 @@
 
     // mainly difficulty_layout strings
     <string name="giveUpText">Give Up</string>
+    <string name="giveUpDialog">Game Over!</string>
+    <string name="scoresDialog">High Score: 00\nCurrent Score: 00</string>
+    <string-array name="giveUpDialogItems">
+        <item>Home</item>
+        <item>Play Again</item></string-array>
     <string name="startGameText">Start Game</string>
     <string name="timerText">Timer:</string>
     <string name="timerValueText">3</string>
