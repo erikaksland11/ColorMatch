@@ -18,6 +18,7 @@ public class ThreeButtonGameLayout extends ActionBarActivity {
     // the two list of numbers associated with the colors
     private ArrayList<Integer> playerColorList = new ArrayList<Integer>();
     private ArrayList<Integer> compColorList = new ArrayList<Integer>();
+    //private int timer = compColorList.size();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +68,7 @@ public class ThreeButtonGameLayout extends ActionBarActivity {
         display.setBackgroundColor(Color.parseColor("ffffffff"));
     }
 
-    public void colorButtonValue(View view) {
+    public void colorButtonValue(View view) throws InterruptedException {
         if (view.getId() == R.id.blueButton) {
             playerColorList.add(0);    //adds user Pushed button
         } else if (view.getId() == R.id.yellowButton) {
@@ -78,7 +79,7 @@ public class ThreeButtonGameLayout extends ActionBarActivity {
         checkValidColor();
     }
 
-    public void checkValidColor() {
+    public void checkValidColor() throws InterruptedException {
         for (int i = 0; i < playerColorList.size(); i++) {
             if (playerColorList.get(i) != compColorList.get(i)) {
                 endGame();
@@ -89,8 +90,15 @@ public class ThreeButtonGameLayout extends ActionBarActivity {
         }
     }
 
-    public void passedCurrentRound() {
+    public void passedCurrentRound() throws InterruptedException {
+        turnButtonsOff();
+        //score = playerColorList.size();
+        playerColorList.clear();
 
+        Random rand = new Random();     // to create the random numbers to match to colors
+        compColorList.add(compColorList.size() - 1, rand.nextInt(2));
+
+        gamePlay(compColorList);
     }
 
 
