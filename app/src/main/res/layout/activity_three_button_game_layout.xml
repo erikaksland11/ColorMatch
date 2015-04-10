@@ -23,7 +23,8 @@
             android:text="@string/giveUpText"
             android:id="@+id/giveUpButton"
             android:layout_gravity="center_vertical|left"
-            android:onClick="gameOverDialog" />
+            android:onClick="gameOverDialog"
+            android:enabled="true" />
 
         <Button
             android:layout_width="wrap_content"
@@ -32,7 +33,8 @@
             android:id="@+id/startGameButton"
             android:layout_gravity="center_vertical|right"
             android:layout_weight="1"
-            android:onClick="startGame" />
+            android:onClick="startGame"
+            android:enabled="true" />
     </LinearLayout>
 
     <GridLayout
@@ -147,7 +149,8 @@
             android:layout_gravity="center_horizontal|fill_vertical"
             android:layout_rowWeight="1"
             android:background="#ff0096ff"
-            android:onClick="checkColorMatch" />
+            android:onClick="colorButtonValue"
+            android:enabled="false"/>
 
         <Button
             android:layout_width="match_parent"
@@ -158,7 +161,8 @@
             android:layout_gravity="center_horizontal|fill_vertical"
             android:background="#ffffe600"
             android:layout_rowWeight="1"
-            android:onClick="checkColorMatch" />
+            android:onClick="colorButtonValue"
+            android:enabled="false"/>
 
         <Button
             android:layout_width="match_parent"
@@ -169,7 +173,8 @@
             android:layout_gravity="center_horizontal|fill_vertical"
             android:background="#ffff3200"
             android:layout_rowWeight="1"
-            android:onClick="checkColorMatch" />
+            android:onClick="colorButtonValue"
+            android:enabled="false"/>
     </GridLayout>
 
 </GridLayout>
