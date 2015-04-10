@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.CountDownTimer;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,7 +19,7 @@ public class ThreeButtonGameLayout extends ActionBarActivity {
     // the two list of numbers associated with the colors
     private ArrayList<Integer> playerColorList = new ArrayList<Integer>();
     private ArrayList<Integer> compColorList = new ArrayList<Integer>();
-    //private int timer = compColorList.size();
+    //private int timerStartTIme = compColorList.size();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,34 +39,45 @@ public class ThreeButtonGameLayout extends ActionBarActivity {
         Button temp = (Button) findViewById(R.id.startGameButton);
         temp.setEnabled(false);     // So the user cannot hit this button during game play
 
+        int lastColor = -1;
         for (int i = 0; i < 4; i++) {
-            compColorList.add(i, rand.nextInt(2));
+            compColorList.add(rand.nextInt(3));
+            checkForNewColor(rand, i, lastColor);
+            lastColor = compColorList.get(i);
         }
-        gamePlay(compColorList);
+        gamePlay();
+    }
+
+    public void checkForNewColor(Random rand, int i, int lastColor) {
+        if (compColorList.get(i) == lastColor) {
+            compColorList.set(i, rand.nextInt(3));
+            checkForNewColor(rand, i, lastColor);
+        }
     }
 
     // lets the user start the game
-    public void gamePlay(ArrayList<Integer> compColorList) throws InterruptedException {
-        showColors(compColorList);      // to display the colors in the display
-                                        // start timer (when made)
-        turnButtonsOn();        // So the user can match the buttons during game play
-    }
-
-    public void showColors(ArrayList<Integer> compColorList) throws InterruptedException {
-        ImageView display = (ImageView)findViewById(R.id.colorDisplayView);
-        int currentColorNum;
-        for (int i = 0; i < compColorList.size(); i++) {
-            currentColorNum = compColorList.get(i);
-            if (currentColorNum == 0) {
-                display.setBackgroundColor(Color.parseColor("ff0096ff"));
-            } else if (currentColorNum == 1) {
-                display.setBackgroundColor(Color.parseColor("ffffe600"));
-            } else if (currentColorNum == 2) {
-                display.setBackgroundColor(Color.parseColor("ffff3200"));
+    public void gamePlay() throws InterruptedException {
+        CountDownTimer timer = new CountDownTimer(compColorList.size() * 750, 750) {
+            int colorIndex = 0;
+            ImageView display = (ImageView)findViewById(R.id.colorDisplayView);
+            public void onTick(long millisUntilFinished) {
+                if (compColorList.get(colorIndex) == 0) {
+                    display.setBackgroundColor(Color.parseColor("#FF0096FF"));
+                } else if (compColorList.get(colorIndex) == 1) {
+                    display.setBackgroundColor(Color.parseColor("#FFFFE600"));
+                } else if (compColorList.get(colorIndex) == 2) {
+                    display.setBackgroundColor(Color.parseColor("#FFFF3200"));
+                }
+                colorIndex++;
             }
-            Thread.sleep(750);          //space need to pause for a .75 seconds
-        }
-        display.setBackgroundColor(Color.parseColor("ffffffff"));
+
+            public void onFinish() {
+                display.setBackgroundColor(Color.WHITE);
+                turnButtonsOn();        // So the user can match the buttons during game play
+            }
+        };
+        timer.start();
+
     }
 
     public void colorButtonValue(View view) throws InterruptedException {
@@ -96,9 +108,9 @@ public class ThreeButtonGameLayout extends ActionBarActivity {
         playerColorList.clear();
 
         Random rand = new Random();     // to create the random numbers to match to colors
-        compColorList.add(compColorList.size() - 1, rand.nextInt(2));
+        compColorList.add(compColorList.size() - 1, rand.nextInt(3));
 
-        gamePlay(compColorList);
+        gamePlay();
     }
 
 

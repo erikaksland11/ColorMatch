@@ -137,53 +137,53 @@
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="125dp"
             android:id="@+id/blueButton"
             android:layout_column="0"
             android:layout_row="0"
-            android:layout_gravity="center|fill"
+            android:layout_gravity="center|fill_horizontal"
             android:background="#ff0096ff"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1" />
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="125dp"
             android:id="@+id/yellowButton"
             android:layout_column="0"
             android:layout_row="1"
-            android:layout_gravity="center|fill"
+            android:layout_gravity="center|fill_horizontal"
             android:background="#ffffe600"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1" />
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="125dp"
             android:id="@+id/redButton"
             android:layout_column="0"
             android:layout_row="2"
-            android:layout_gravity="center|fill"
+            android:layout_gravity="center|fill_horizontal"
             android:background="#ffff3200"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1" />
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="125dp"
             android:id="@+id/purpleButton"
             android:layout_column="1"
             android:layout_row="0"
-            android:layout_gravity="center|fill"
+            android:layout_gravity="center|fill_horizontal"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:background="#ffdc00ff" />
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="125dp"
             android:id="@+id/greenButton"
-            android:layout_gravity="center|fill"
+            android:layout_gravity="center|fill_horizontal"
             android:layout_column="1"
             android:layout_row="1"
             android:layout_columnWeight="1"
@@ -192,11 +192,11 @@
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="125dp"
             android:id="@+id/orangeButton"
             android:layout_row="2"
             android:layout_column="1"
-            android:layout_gravity="center|fill"
+            android:layout_gravity="center|fill_horizontal"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:background="#ffff7d00" />

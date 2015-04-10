@@ -50,15 +50,19 @@ public class SelectDifficultyMenu extends ActionBarActivity {
     public void showGameLayout(View view){
         if (difficultyNumber == 0) {
             Intent intent = new Intent(this, ThreeButtonGameLayout.class);
+            //intent.putExtra("DIFFICULTY",difficultyNumber);
             startActivity(intent);
         } else if (difficultyNumber == 1) {
             Intent intent = new Intent(this, ThreeButtonGameLayout.class);
+            //intent.putExtra("DIFFICULTY",difficultyNumber);
             startActivity(intent);
         } else if (difficultyNumber == 2) {
             Intent intent = new Intent(this, SixButtonGameLayout.class);
+            //intent.putExtra("DIFFICULTY",difficultyNumber);
             startActivity(intent);
         } else {
             Intent intent = new Intent(this, SixButtonGameLayout.class);
+            //intent.putExtra("DIFFICULTY",difficultyNumber);
             startActivity(intent);
         }
     }
