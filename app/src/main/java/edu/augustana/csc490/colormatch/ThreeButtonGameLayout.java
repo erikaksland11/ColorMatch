@@ -127,7 +127,7 @@ public class ThreeButtonGameLayout extends ActionBarActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(ThreeButtonGameLayout.this);
         builder.setTitle(getString(R.string.giveUpDialog));     // set the AlertDialog's title
         // set list of items to display in dialog
-        String temp = getString(R.string.scoreText) + getString(R.string.scoreValueText);
+        String temp = getString(R.string.scoreText) + " " + Integer.toString(currentScore);
         builder.setMessage(temp);     // set the AlertDialog's message
         builder.setPositiveButton(getString(R.string.playAgainText),
                 new DialogInterface.OnClickListener() {
