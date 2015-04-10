@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -19,7 +20,12 @@ public class ThreeButtonGameLayout extends ActionBarActivity {
     // the two list of numbers associated with the colors
     private ArrayList<Integer> playerColorList = new ArrayList<Integer>();
     private ArrayList<Integer> compColorList = new ArrayList<Integer>();
+    private Random rand;
+    private int lastColor = -1;
     //private int timerStartTIme = compColorList.size();
+    private TextView scoreView;
+    private int currentScore = 0;
+    //private TextView highScoreView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,29 +41,32 @@ public class ThreeButtonGameLayout extends ActionBarActivity {
     // gets the game started
     // NOTE: Blue = 0, Yellow = 1, Red = 2
     public void startGame(View view) throws InterruptedException {
-        Random rand = new Random();     // to create the random numbers to match to colors
         Button temp = (Button) findViewById(R.id.startGameButton);
         temp.setEnabled(false);     // So the user cannot hit this button during game play
 
-        int lastColor = -1;
         for (int i = 0; i < 4; i++) {
-            compColorList.add(rand.nextInt(3));
-            checkForNewColor(rand, i, lastColor);
-            lastColor = compColorList.get(i);
+            addNewRandColor();
         }
         gamePlay();
     }
 
-    public void checkForNewColor(Random rand, int i, int lastColor) {
-        if (compColorList.get(i) == lastColor) {
-            compColorList.set(i, rand.nextInt(3));
-            checkForNewColor(rand, i, lastColor);
+    public void addNewRandColor() {
+        rand = new Random();     // to create the random numbers to match to colors
+        compColorList.add(rand.nextInt(3));
+        checkForNewColor(rand, compColorList.size() - 1, lastColor);
+        lastColor = compColorList.get(compColorList.size() - 1);
+    }
+
+    public void checkForNewColor(Random rand, int newColor, int lastColor) {
+        if (compColorList.get(newColor) == lastColor) {
+            compColorList.set(newColor, rand.nextInt(3));
+            checkForNewColor(rand, newColor, lastColor);
         }
     }
 
     // lets the user start the game
     public void gamePlay() throws InterruptedException {
-        CountDownTimer timer = new CountDownTimer(compColorList.size() * 750, 750) {
+        CountDownTimer timer = new CountDownTimer(compColorList.size() * 750 + 700, 750) {
             int colorIndex = 0;
             ImageView display = (ImageView)findViewById(R.id.colorDisplayView);
             public void onTick(long millisUntilFinished) {
@@ -104,44 +113,49 @@ public class ThreeButtonGameLayout extends ActionBarActivity {
 
     public void passedCurrentRound() throws InterruptedException {
         turnButtonsOff();
-        //score = playerColorList.size();
+        scoreView = (TextView) findViewById(R.id.scoreValueTextView);
+        currentScore = playerColorList.size();
+        scoreView.setText(Integer.toString(currentScore));
+
         playerColorList.clear();
-
-        Random rand = new Random();     // to create the random numbers to match to colors
-        compColorList.add(compColorList.size() - 1, rand.nextInt(3));
-
+        addNewRandColor();
         gamePlay();
     }
 
-
     public void endGame() {
+        //checkForHighScore();
         AlertDialog.Builder builder = new AlertDialog.Builder(ThreeButtonGameLayout.this);
         builder.setTitle(getString(R.string.giveUpDialog));     // set the AlertDialog's title
         // set list of items to display in dialog
-        builder.setItems(R.array.giveUpDialogItems, new DialogInterface.OnClickListener() {
-            // responds to user touch by going to the home page
-            // or the select difficulty menu
-            Intent intent;
-            public void onClick(DialogInterface dialog, int which) {
-                switch (which) {
-                    case 0: // home
-                        intent = new Intent(ThreeButtonGameLayout.this,
-                                MainActivity.class);
-                        break;
-                    case 1: // play again
-                        intent = new Intent(ThreeButtonGameLayout.this,
-                                SelectDifficultyMenu.class);
-                        break;
+        String temp = getString(R.string.scoreText) + getString(R.string.scoreValueText);
+        builder.setMessage(temp);     // set the AlertDialog's message
+        builder.setPositiveButton(getString(R.string.playAgainText),
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                       Intent intent = new Intent(ThreeButtonGameLayout.this,
+                               SelectDifficultyMenu.class);
+                        startActivity(intent);
+                    }
                 }
-                startActivity(intent);
-            }
-        } // end DialogInterface.OnClickListener
-        );// end call to builder.setItems
-        //builder.setMessage(getString(R.string.scoresDialog));     // set the AlertDialog's message
+        );  // endSetPositive
+        builder.setNegativeButton(getString(R.string.homeText),
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(ThreeButtonGameLayout.this,
+                                MainActivity.class);
+                        startActivity(intent);
+                    }
+                }
+        );  //endSetNegative
         builder.create().show(); // display the AlertDialog
     }
 
-
+//    public void checkForHighScore() {
+//        highScoreView = (TextView) findViewById(R.id.easyHighScoreTextView);
+//        if (currentScore > Integer.parseInt((String) highScoreView.getText())) {
+//            highScoreView.setText(Integer.toString(currentScore));
+//        }
+//    }
 
     public void turnButtonsOn() {
         Button temp  = (Button) findViewById(R.id.blueButton);
@@ -160,16 +174,4 @@ public class ThreeButtonGameLayout extends ActionBarActivity {
         temp = (Button) findViewById(R.id.redButton);
         temp.setEnabled(false);
     }
-
-
-
-
-
-
-
-
-
-
-
-
 }

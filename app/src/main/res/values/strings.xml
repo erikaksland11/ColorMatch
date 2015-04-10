@@ -23,14 +23,12 @@
     // mainly difficulty_layout strings
     <string name="giveUpText">Give Up</string>
     <string name="giveUpDialog">Game Over!</string>
-    <string name="scoresDialog">High Score: 00\nCurrent Score: 00</string>
-    <string-array name="giveUpDialogItems">
-        <item>Home</item>
-        <item>Play Again</item></string-array>
+    <string name="homeText">Home</string>
+    <string name="playAgainText">Play Again</string>
     <string name="startGameText">Start Game</string>
     <string name="timerText">Timer:</string>
-    <string name="timerValueText">3</string>
-    <string name="scoreText">Score:</string>
+    <string name="timerValueText">4</string>
+    <string name="scoreText">Current Score:</string>
     <string name="scoreValueText">0</string>
 
     // mainly high_scores_menu strings
@@ -44,9 +42,4 @@
     <string name="expertText">Expert:</string>
     <string name="expertHighScore">0</string>
     <string name="resetHighScoresText">Reset Your High Scores</string>
-
-
-
-
-
 </resources>

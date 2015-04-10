@@ -19,7 +19,7 @@
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="65dp"
             android:text="@string/giveUpText"
             android:id="@+id/giveUpButton"
             android:layout_gravity="center_vertical|left"
@@ -28,7 +28,7 @@
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="65dp"
             android:text="@string/startGameText"
             android:id="@+id/startGameButton"
             android:layout_gravity="center_vertical|right"
